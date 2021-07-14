@@ -26,7 +26,7 @@ dependencies:
   bloc: ^7.0.0
   flutter_bloc: ^7.0.1
   dio: ^4.0.0
-  hexcolor: 
+  hexcolor: ^2.0.4
   shared_preferences: ^2.0.6
   flutter_conditional_rendering: ^2.0.0
   webview_flutter: ^2.0.10
