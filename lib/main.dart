@@ -8,7 +8,6 @@ import 'package:newapp/layout/modecubit/modestate.dart';
 import 'package:newapp/layout/new_layout_screen.dart';
 import 'package:newapp/shared/remote/cache_helper.dart';
 import 'package:newapp/shared/remote/dio_helper.dart';
-
 import 'layout/appcubit/appcubit.dart';
 
 void main() async {
@@ -17,12 +16,12 @@ void main() async {
   DioHelper.init();
   await CacheHelper.init();
 
-  bool isDark = CacheHelper.getData(key: 'isDark');
+  bool? isDark = CacheHelper.getData(key: 'isDark');
   runApp(MyApp(isDark));
 }
 
 class MyApp extends StatelessWidget {
-  final bool isDark;
+  final bool? isDark;
   MyApp(this.isDark);
   @override
   Widget build(BuildContext context) {

@@ -26,12 +26,12 @@ class AppCubit extends Cubit<AppStates> {
       label: 'Business',
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.sports),
-      label: 'Sports',
-    ),
-    BottomNavigationBarItem(
       icon: Icon(Icons.science),
       label: 'Science',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.sports),
+      label: 'Sports',
     ),
   ];
 
