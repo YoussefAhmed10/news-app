@@ -39,7 +39,10 @@ class SearchScreen extends StatelessWidget {
                         fontSize: 20.0,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 2.0,
+                        ),
                       ),
                     ),
                   ),

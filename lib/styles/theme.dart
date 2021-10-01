@@ -46,6 +46,7 @@ ThemeData lightTheme = ThemeData(
 );
 
 ThemeData darkTheme = ThemeData(
+  primarySwatch: Colors.deepOrange,
   scaffoldBackgroundColor: HexColor('121212'),
   //appbar theme dark
   appBarTheme: AppBarTheme(
