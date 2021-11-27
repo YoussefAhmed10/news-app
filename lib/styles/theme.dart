@@ -10,7 +10,6 @@ ThemeData lightTheme = ThemeData(
     titleSpacing: 20.0,
     color: Colors.white,
     elevation: 0.0,
-    backwardsCompatibility: false,
     systemOverlayStyle: SystemUiOverlayStyle(
       statusBarColor: Colors.white,
       statusBarIconBrightness: Brightness.dark,
@@ -53,7 +52,6 @@ ThemeData darkTheme = ThemeData(
     titleSpacing: 20.0,
     color: HexColor('1f1f1f'),
     elevation: 0.0,
-    backwardsCompatibility: false,
     systemOverlayStyle: SystemUiOverlayStyle(
       statusBarColor: HexColor('000000'),
       statusBarIconBrightness: Brightness.light,
