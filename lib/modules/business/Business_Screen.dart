@@ -8,12 +8,13 @@ class BusinessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var list = AppCubit.get(context).business;
-    return BlocConsumer<AppCubit, AppStates>(
-        listener: (context, state) {},
-        builder: (context, state) {
-          return Scaffold(
-            body: buildArticleItem(context, list),
-          );
-        });
+    return BlocBuilder<AppCubit, AppStates>(
+      // listener: (context, state) {},
+      builder: (context, state) {
+        return Scaffold(
+          body: buildArticleItem(context, list),
+        );
+      },
+    );
   }
 }

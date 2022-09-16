@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newapp/layout/modecubit/modecubit.dart';
 import 'package:newapp/layout/modecubit/modestate.dart';
 import 'package:newapp/layout/new_layout_screen.dart';
+import 'package:newapp/shared/local/bloc-observer.dart';
 import 'package:newapp/shared/remote/cache_helper.dart';
 import 'package:newapp/shared/remote/dio_helper.dart';
 import 'package:newapp/styles/theme.dart';
@@ -11,12 +11,16 @@ import 'layout/appcubit/appcubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Bloc.observer = BlocObserver();
+  // Bloc.observer = BlocObserver();
   DioHelper.init();
   await CacheHelper.init();
-
-  bool? isDark = CacheHelper.getData(key: 'isDark');
-  runApp(MyApp(isDark));
+  BlocOverrides.runZoned(
+    () {
+      bool? isDark = CacheHelper.getData(key: 'isDark');
+      runApp(MyApp(isDark));
+    },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
 class MyApp extends StatelessWidget {
